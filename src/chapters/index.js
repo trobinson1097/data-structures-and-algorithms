@@ -1,3 +1,5 @@
+import { introductionChapters } from './introduction';
+import { justEnoughMathChapters } from './just-enough-math';
 import { algorithmicThinkingChapters } from './algorithmic-thinking';
 import { arraysAndTwoPointersChapters } from './arrays-and-two-pointers';
 import { twoDArraysChapters } from './2d-arrays';
@@ -8,8 +10,11 @@ import { slidingWindowChapters } from './sliding-window';
 import { sortingAndBinarySearchChapters } from './sorting-and-binary-search';
 import { combiningPatternsChapters } from './combining-patterns';
 import { interviewReadinessChapters } from './interview-readiness';
+import { conclusionChapters } from './conclusion';
 
 export const chapters = [
+  ...introductionChapters,
+  ...justEnoughMathChapters,
   ...algorithmicThinkingChapters,
   ...arraysAndTwoPointersChapters,
   ...twoDArraysChapters,
@@ -19,7 +24,8 @@ export const chapters = [
   ...slidingWindowChapters,
   ...sortingAndBinarySearchChapters,
   ...combiningPatternsChapters,
-  ...interviewReadinessChapters
+  ...interviewReadinessChapters,
+  ...conclusionChapters
 ]
 
 /**
