@@ -1,3 +1,28 @@
+import { formatGlossary } from "../../utils/format_utils";
+
+const data = [
+  { term: "Base", definition: "The number an exponent is applied to.", week: "" },
+  { term: "Binary Search", definition: "An algorithm that finds items in sorted lists by repeatedly dividing the search space in half.", week: "" },
+  { term: "Coefficient", definition: "Any number that appears in a polynomial, either multiplied with a variable or on its own.", week: "" },
+  { term: "Combination", definition: "An arrangement of items in which the order of the items does not matter.", week: "" },
+  { term: "Degree", definition: "The size of the exponent operating on a term. In a polynomial, degree refers to the largest exponent of all the terms.", week: "" },
+  { term: "Exponent", definition: "A number written over another one indicating how many times the second number is multiplied by itself.", week: "" },
+  { term: "Exponential Growth", definition: "Growth pattern where the output doubles or increases by a constant factor for each unit increase in input.", week: "" },
+  { term: "Expression", definition: "A sequence of numbers, symbols, variables, and operations that can be evaluated to get a single result.", week: "" },
+  { term: "Factorial", definition: "The product of all positive integers less than or equal to n, denoted as n!.", week: "" },
+  { term: "Function", definition: "A mathematical relationship that maps each input to exactly one output.", week: "" },
+  { term: "Growth Rate", definition: "How quickly a function's output increases as its input increases.", week: "" },
+  { term: "Linear Growth", definition: "Growth pattern where quantities increase by a constant amount in each time period.", week: "" },
+  { term: "Logarithm", definition: "The inverse operation of exponentiation; log_b(x) asks \"to what power must b be raised to get x?\"", week: "" },
+  { term: "Logarithmic Growth", definition: "Growth pattern that increases slowly, characteristic of efficient divide-and-conquer algorithms.", week: "" },
+  { term: "Permutation", definition: "An arrangement of objects where order matters.", week: "" },
+  { term: "Polynomial", definition: "A mathematical expression consisting of variables, coefficients, and non-negative integer exponents.", week: "" },
+  { term: "Polynomial Growth", definition: "Growth pattern described by polynomial functions (linear, quadratic, cubic, etc.).", week: "" },
+  { term: "Quadratic Growth", definition: "Growth pattern where quantities increase proportionally to the square of the input size.", week: "" },
+  { term: "Term", definition: "A combination of coefficients and variables, or a number on its own.", week: "" },
+  { term: "Variable", definition: "A letter or symbol that represents a numeric value that can change.", week: "" },
+];
+
 export const glossaryChapter = {
   id: 'just-enough-math-glossary',
   title: 'Just Enough Math - Glossary',
@@ -5,34 +30,6 @@ export const glossaryChapter = {
   previousChapterId: 'combinations-permutations',
   nextChapterId:'just-enough-math-checkpoint',
   content: `
-| Term | Definition |
-|------|------------|
-| Algorithm Complexity | A measure of how the runtime or space requirements of an algorithm grow with input size. |
-| Big O Notation | Mathematical notation used to describe the upper bound of algorithm complexity. |
-| Complexity Class | A set of computational problems with similar resource requirements (time or space). |
-| Exponential Growth | Growth pattern where quantities increase by a constant factor in each time period. |
-| Function | A mathematical relationship that maps each input to exactly one output. |
-| Factorial | The product of all positive integers less than or equal to n, denoted as n!. |
-| Growth Rate | How quickly a function's output increases as its input increases. |
-| Linear Growth | Growth pattern where quantities increase by a constant amount in each time period. |
-| Logarithm | The inverse operation of exponentiation; log_b(x) asks "to what power must b be raised to get x?" |
-| Logarithmic Growth | Growth pattern that increases slowly, characteristic of efficient divide-and-conquer algorithms. |
-| Permutation | An arrangement of objects where order matters. |
-| Polynomial | A mathematical expression consisting of variables, coefficients, and non-negative integer exponents. |
-| Polynomial Growth | Growth pattern described by polynomial functions (linear, quadratic, cubic, etc.). |
-| Quadratic Growth | Growth pattern where quantities increase proportionally to the square of the input size. |
-| Recursion | A programming technique where a function calls itself to solve smaller instances of the same problem. |
-| Set | A collection of distinct objects, considered as a whole. |
-| Sequence | An ordered list of numbers or objects following a specific pattern. |
-| Time Complexity | A measure of how the execution time of an algorithm grows with input size. |
-| Space Complexity | A measure of how much memory an algorithm uses relative to the input size.  |
-| O(1) | Constant time 😄 |
-| O(log n) | Logarithmic time 🙂 |
-| O(n) | Linear time 🙂 |
-| O(n log n) | Linearithmic time 😐 |
-| O(n²) | Quadratic time 😕 |
-| O(n³) | Cubic time 😟 |
-| O(2ⁿ) | Exponential time 😫 |
-| O(n!) | Factorial time 😱 |`,
+${formatGlossary(data)}`,
   exercise: null
 };
